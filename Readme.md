@@ -16,7 +16,7 @@ It’s a beginner-friendly tutorial for building AI-powered vector databases.
 ---
 
 ## 🧩 Project Structure
-
+```
 📁 chromadb-gemini-demo
 ├── main.py # Core script for embeddings and saving to Chroma
 ├── requirements.txt # Python dependencies

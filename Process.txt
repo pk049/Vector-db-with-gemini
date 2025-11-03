@@ -1,0 +1,21 @@
+1.First setup the chromadb cloud client.
+
+2.Take all the data that you want to add in in your Memory.
+
+3.Do preprocessing step at that data like Split the data into Chunks.
+
+4.Create a class for doing embeddings and make function inside it to do actual emeding from documents
+ or Chunks.Embeddings function is a class that takes a model name , text to embed as content
+ task type and returns embeddings for the given input.
+(Function used genai.embed_content)
+4.Create a class Object and process the actual embeddings.
+
+5.Create a collection by function (get_or_creaete_collection) in Chromadb and Add the embeddings in the collection by(collection.add(ids,)).
+ Specify the embeding function here while putting data into Collection.
+
+6.Now you can query the data from the collection Using function (collection.query(pass embeded query here with n_results parameter ))
+
+7.Thes task type parameter is used to specify the type of task for which the embeddings are being generated. In this case, "retrieval_query" 
+is used to indicate that the embeddings are being generated for a query that will be used for retrieval purposes. 
+This can help the embedding model to generate embeddings that are optimized for retrieval tasks, such as finding similar
+documents or items.

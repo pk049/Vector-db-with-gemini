@@ -1,0 +1,104 @@
+=======================================
+ ChromaDB + Gemini Vector DB Setup Guide
+=======================================
+
+This file contains the complete setup instructions
+to run the ChromaDB vector database project using
+Google Gemini embeddings.
+
+
+
+---------------------------------------
+1. Clone the Repository
+---------------------------------------
+git clone https://github.com/yourusername/chromadb-gemini-demo.git
+cd chromadb-gemini-demo
+
+
+
+
+---------------------------------------
+2. Create a Virtual Environment
+---------------------------------------
+python -m venv venv
+# Activate on Windows:
+venv\Scripts\activate
+# Activate on Linux/Mac:
+source venv/bin/activate
+
+
+
+
+---------------------------------------
+3. Install Dependencies
+---------------------------------------
+pip install -r requirements.txt
+
+
+
+
+---------------------------------------
+4. Create .env File
+---------------------------------------
+In the project root, create a file named ".env" with the following:
+
+CHROMA_API_KEY=***
+CHROMA_TENANT_ID=***
+CHROMA_DATABASE=***
+GOOGLE_API_KEY=***
+
+
+
+
+---------------------------------------
+5. Verify Requirements
+---------------------------------------
+Ensure that requirements.txt contains:
+chromadb
+google-generativeai
+python-dotenv
+
+If not, add them manually.
+
+
+
+---------------------------------------
+6. Prepare Input File
+---------------------------------------
+Create a text file named "data.txt" in the root directory.
+Add any sample text you want to embed into ChromaDB.
+
+
+
+---------------------------------------
+7. Run the Script
+---------------------------------------
+python main.py
+
+Expected Output:
+✅ Added 15 documents to collection 'my_data_collection'
+
+🔍 Query results:
+
+1. Distance: 0.6552
+   15. Tonight, Pratik Kohli closed his laptop at 2 AM—tired but proud....
+
+   .......
+
+
+---------------------------------------
+8. Done!
+---------------------------------------
+Your text embeddings are now saved in your
+ChromaDB Cloud instance.
+You can modify main.py to perform vector queries,
+similarity searches, or document retrieval.
+
+---------------------------------------
+(Optional) Deactivate Environment
+---------------------------------------
+deactivate
+
+=======================================
+End of Setup Guide
+=======================================

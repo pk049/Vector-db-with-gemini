@@ -1,0 +1,28 @@
+# Ignore Python virtual environments
+venv/
+__pycache__/
+*.pyc
+
+# Environment variables and credentials
+.env
+*.env
+
+# IDE / Editor files
+.vscode/
+.idea/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Log or temp files
+*.log
+*.tmp
+
+# Cache or compiled data
+.cache/
+dist/
+build/
+
+# Jupyter and temp notebooks
+*.ipynb_checkpoints
